@@ -28,6 +28,7 @@ body {
     right: 0;
     z-index: 999;
     border-bottom: 1px solid var(--line-color);
+    background: var(--white-color);
 }
 
 #header.on {
@@ -296,12 +297,14 @@ body {
 
 .main_visual {
     position: relative;
+    margin-top: 80px;
+    /* 헤더 높이만큼 아래로 */
 }
 
 
 .main_visual .main_visual_slide .itm {
     position: relative;
-    height: 100vh;
+    height: calc(100vh - 80px);
     overflow: hidden;
 }
 
@@ -311,11 +314,12 @@ body {
 }
 
 .main_visual .main_visual_slide .itm01 .bg {
-    background: url() no-repeat center center/cover;
+    background: url(../images/main_visual01.jpg) no-repeat;
+    background-size: contain;
 }
 
 .main_visual .main_visual_slide .itm02 .bg {
-    background: url() no-repeat center center/cover;
+    background: url(../images/main_visual02.jpg) no-repeat center center/cover;
 }
 
 .main_visual .main_visual_slide .itm03 .bg {
@@ -332,4 +336,12 @@ body {
     width: 100%;
 
     text-align: left;
+}
+
+#footer {
+    height: 64rem;
+}
+
+* {
+    outline: 1px solid tomato--;
 }
