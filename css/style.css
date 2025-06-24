@@ -1,0 +1,337 @@
+:root {
+    --primary-color: #ed2438;
+    /*root는 저 위에 있다는 뜻, --primary-color 중요한컬러*/
+    --secondary-color: #111111;
+
+    --body-color: #333333;
+
+    --line-color: #dddddd;
+    --white-color: #ffffff;
+    /*white-color 많이 쓰는 컬러*/
+    --backgroud-color: #f7f7f7;
+}
+
+html {
+    font-size: 62.5%;
+    /*10px??폰트 사이즈 크게 벌어지는걸 예방한다. 6.25%이렇게 쓰면 안되고 10단위로 사용해야한다.*/
+}
+
+body {
+    font-size: 1.6rem;
+    /*10px이 1rem, 1.6rem이 16px이 된다.*/
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    border-bottom: 1px solid var(--line-color);
+}
+
+#header.on {
+    border-bottom: 1px solid var(--line-color);
+}
+
+#header .hd_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 144rem;
+    margin: 0 auto;
+    line-height: 8rem;
+}
+
+#header h1 a {
+    display: flex;
+}
+
+#header h1 a img {
+    height: 6.4rem;
+}
+
+#header .gnb {}
+
+#header .gnb>ul {
+    display: flex;
+    gap: 4rem;
+
+}
+
+#header .gnb>ul>li {
+    position: relative;
+}
+
+
+#header .gnb>ul>li>a {
+    display: block;
+    font-size: 1.8rem;
+    line-height: 8rem;
+    white-space: nowrap;
+}
+
+#header .gnb>ul>li ul {
+    position: absolute;
+
+    top: auto;
+    left: 50%;
+
+    padding: 8px 0;
+
+    opacity: 0;
+    visibility: hidden;
+    /*애니메이션만들어줄거다.*/
+    transform: translate(-50%, 0);
+    /*0에서 -24px까지 올라온다.*/
+
+    background: var(--white-color);
+    border-radius: 8px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+    /*좌우안떨어지고4px*/
+
+    transition: 0.4s;
+}
+
+#header .gnb>ul>li:hover ul {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -12px);
+    /*애니메이션만드는방법*/
+}
+
+#header .gnb>ul>li:focus-within ul {
+    /*focus-within 탭키 눌렀을때 메뉴 다 나올 수 있게 하는 방법*/
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -12px);
+}
+
+#header .gnb>ul>li ul a {
+    display: block;
+    line-height: 4rem;
+    padding: 0 3.2rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#header .utils a {
+    display: flex;
+    align-items: center;
+}
+
+.mbtn {
+    display: none;
+}
+
+@media (max-width:768px) {
+    #header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        border-bottom: 1px solid var(--line-color);
+
+        /* r */
+        border-bottom: none;
+    }
+
+    #header.on {
+        border-bottom: 1px solid var(--line-color);
+
+        /* r */
+        border-bottom: none;
+    }
+
+    #header .hd_wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 144rem;
+        margin: 0 auto;
+        line-height: 8rem;
+    }
+
+    #header h1 a {
+        display: flex;
+    }
+
+    #header h1 a img {
+        height: 6.4rem;
+    }
+
+    #header .gnb {
+        /* r */
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+
+        padding: 120px 16px 0 16px;
+
+        width: calc(100% - 80px);
+        height: 200vh;
+
+        background: var(--white-color);
+        border-right: 1px solid var(--line-color);
+    }
+
+    #header .gnb.on {
+        display: block;
+    }
+
+    #header .gnb>ul {
+        display: flex;
+        gap: 4rem;
+
+        /* r */
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #header .gnb>ul>li {
+        position: relative;
+    }
+
+
+    #header .gnb>ul>li>a {
+        display: block;
+        font-size: 1.8rem;
+        line-height: 8rem;
+        white-space: nowrap;
+
+        /* r */
+        line-height: 4rem;
+        border-bottom: 1px solid #ddd;
+    }
+
+    #header .gnb>ul>li ul {
+        position: absolute;
+
+        top: auto;
+        left: 50%;
+
+        padding: 8px 0;
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(-50%, 0);
+
+        background: var(--white-color);
+        border-radius: 8px;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+
+        transition: 0.4s;
+
+        /* r */
+        display: none;
+        position: static;
+        transform: translate(0, 0);
+        box-shadow: none;
+        visibility: visible;
+        padding: 0;
+        border-radius: 0;
+        background: none;
+        opacity: 1;
+
+        transition: none;
+    }
+
+    #header .gnb>ul>li:hover ul {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, -12px);
+
+        /* r */
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0, 0);
+    }
+
+    #header .gnb>ul>li:focus-within ul {
+        /*focus-within 탭키 눌렀을때 메뉴 다 나올 수 있게 하는 방법*/
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, -12px);
+
+        /*  */
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+    #header .gnb>ul>li ul a {
+        display: block;
+        line-height: 4rem;
+        padding: 0 3.2rem;
+        text-align: center;
+        font-size: 1.5rem;
+
+        /* r */
+        border-bottom: 1px solid var(--line-color);
+    }
+
+    #header .utils a {
+        display: flex;
+        align-items: center;
+
+        /* r */
+        display: none;
+    }
+
+    .mbtn {
+        display: none;
+
+        /* r */
+        display: block;
+        position: fixed;
+        top: 48px;
+        right: 16px;
+        z-index: 999;
+
+        background: #fff;
+        padding: 4px;
+        border: 1px solid #ddd;
+    }
+}
+
+.main_visual {
+    position: relative;
+}
+
+
+.main_visual .main_visual_slide .itm {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main_visual .main_visual_slide .itm .bg {
+    position: absolute;
+    inset: 0 0 0 0;
+}
+
+.main_visual .main_visual_slide .itm01 .bg {
+    background: url() no-repeat center center/cover;
+}
+
+.main_visual .main_visual_slide .itm02 .bg {
+    background: url() no-repeat center center/cover;
+}
+
+.main_visual .main_visual_slide .itm03 .bg {
+    background: url() no-repeat center center/cover;
+}
+
+.main_visual .slg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    max-width: 144rem;
+    width: 100%;
+
+    text-align: left;
+}
