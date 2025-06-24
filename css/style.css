@@ -47,9 +47,7 @@ body {
     display: flex;
 }
 
-#header h1 a img {
-    height: 6.4rem;
-}
+#header h1 a img {}
 
 #header .gnb {}
 
