@@ -63,14 +63,16 @@
     z-index: 1;
     display: inline-flex;
     align-items: center;
-    padding: 0 2.4rem;
-    height: 5rem;
-    border: 1.6px solid var(--white-color);
-    color: var(--white-color);
-    font-size: 1.6rem;
+    padding: 0 1.6rem;
+    height: 4rem;
+    border: 1.6px solid var(--body-color);
+    color: var(--body-color);
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+    border-radius: 8px;
 
     overflow: hidden;
-    /*before background 넣고 튀어나온 색 다 잘라냄*/
+
 }
 
 .default_btn::before {
@@ -84,9 +86,13 @@
     /*색을 뒤로 보낸다.*/
 
     height: 0;
-    background: var(--primary-color);
+    background: var(--body-color);
 
     transition: 0.4s;
+}
+
+.default_btn:hover {
+    color: #fff;
 }
 
 .default_btn:hover::before {

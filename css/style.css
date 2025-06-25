@@ -304,7 +304,7 @@ body {
         /* r */
         display: block;
         position: fixed;
-        top: 48px;
+        top: 2.4rem;
         right: 16px;
         z-index: 999;
 
@@ -340,10 +340,6 @@ body {
     background: url(../images/main_visual01.jpg) no-repeat;
 }
 
-.main_visual .main_visual_slide .itm03 .bg {
-    background: url() no-repeat center center/cover;
-}
-
 .main_visual .slg {
     position: absolute;
     top: 50%;
@@ -356,34 +352,146 @@ body {
     text-align: left;
 }
 
-.main_product {}
+.main_product {
+    background: #f9f9f9;
+}
+
+.main_product .title {
+    text-align: center;
+}
 
 .main_product .inner {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
     gap: 3rem;
+    margin-bottom: 4rem;
 }
 
 .main_product .inner img {
     width: 100%;
     object-fit: cover;
+    margin-bottom: 1.6rem;
 }
 
 .main_product .inner strong {
     display: block;
     white-space: nowrap;
-    text-align: center;
+    line-height: 1.2;
 }
 
 .main_product .inner p {
     display: block;
     white-space: nowrap;
+    margin-top: 8px;
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+
+.main_product .btn_wrap {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
     text-align: center;
 }
 
-#footer {
-    height: 64rem;
+.main_review {}
+
+
+.main_review .title {
+    text-align: center;
 }
+
+.main_review .inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(264px, 1fr));
+    /* 6개 215px, 5개 264px */
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.main_review .inner img {
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 8px;
+}
+
+.main_review .inner strong {
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+
+.main_review .inner p {
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+
+.main_review .inner i {
+    font-size: 1rem;
+    line-height: 1.2;
+}
+
+.main_review .btn_wrap {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+#footer {
+    position: relative;
+    background: #f9f9f9;
+}
+
+#footer .inner {
+    padding: 5.4rem 0 5.4rem 0;
+}
+
+
+#footer .customer {
+    display: flex;
+    justify-content: center;
+    gap: 1.4rem;
+    margin-bottom: 2.4rem;
+}
+
+#footer p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+
+    font-size: 1.2rem;
+    line-height: 2.4rem;
+    color: #909090;
+}
+
+#footer p span {
+    position: relative;
+}
+
+#footer p span~span::before {
+    content: "";
+    /*content는 필수*/
+    position: absolute;
+    top: 50%;
+    left: -16px;
+    width: 1px;
+    height: 0.5em;
+
+    background: #909090;
+
+    transform: translate(0, -50%);
+    /*transform 쓰기 싫으면 top 8px, bottom 8px바꿔주고 tf빼면됨*/
+}
+
+
+#footer address {
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 1.2rem;
+}
+
 
 * {
     outline: 1px solid tomato--;
