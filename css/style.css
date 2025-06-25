@@ -109,15 +109,37 @@ body {
 #header .gnb>ul>li ul a {
     display: block;
     line-height: 4rem;
-    padding: 0 3.2rem;
+    padding: 0 2.4rem;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    white-space: nowrap;
 }
 
-#header .utils a {
+#header .utils {
     display: flex;
     align-items: center;
+    gap: 1.6rem;
+    font-size: 1.4rem;
 }
+
+#header .utils>* {
+    position: relative;
+}
+
+#header .utils>*~*::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -8px;
+
+    transform: translate(-50%, -50%);
+
+    width: 2px;
+    height: 2px;
+    background: var(--body-color);
+    border-radius: 50%;
+}
+
 
 .mbtn {
     display: none;
@@ -271,10 +293,7 @@ body {
         border-bottom: 1px solid var(--line-color);
     }
 
-    #header .utils a {
-        display: flex;
-        align-items: center;
-
+    #header .utils {
         /* r */
         display: none;
     }
@@ -314,12 +333,11 @@ body {
 }
 
 .main_visual .main_visual_slide .itm01 .bg {
-    background: url(../images/main_visual01.jpg) no-repeat;
-    background-size: contain;
+    background: url(../images/main_visual02.jpg) no-repeat;
 }
 
 .main_visual .main_visual_slide .itm02 .bg {
-    background: url(../images/main_visual02.jpg) no-repeat center center/cover;
+    background: url(../images/main_visual01.jpg) no-repeat;
 }
 
 .main_visual .main_visual_slide .itm03 .bg {
@@ -336,6 +354,31 @@ body {
     width: 100%;
 
     text-align: left;
+}
+
+.main_product {}
+
+.main_product .inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 3rem;
+}
+
+.main_product .inner img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.main_product .inner strong {
+    display: block;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.main_product .inner p {
+    display: block;
+    white-space: nowrap;
+    text-align: center;
 }
 
 #footer {
