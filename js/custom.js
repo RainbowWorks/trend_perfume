@@ -24,8 +24,8 @@ $(function () {
         loop: true,
         parallax: true,
         speed: 1500,
-        // autoplay: {
-        //     delay: 3000,
-        // }
+        autoplay: {
+            delay: 3000,
+        }
     });
 });
