@@ -41,7 +41,7 @@ body {
     align-items: center;
     max-width: 144rem;
     margin: 0 auto;
-    line-height: 8rem;
+    height: 8rem;
 }
 
 #header h1 a {
@@ -165,14 +165,7 @@ body {
         border-bottom: none;
     }
 
-    #header .hd_wrap {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 144rem;
-        margin: 0 auto;
-        line-height: 8rem;
-    }
+    #header .hd_wrap {}
 
     #header h1 a {
         display: flex;
