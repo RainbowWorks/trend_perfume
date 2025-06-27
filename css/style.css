@@ -159,8 +159,6 @@ body {
         z-index: 999;
         border-bottom: 1px solid var(--line-color);
 
-        /* r */
-        border-bottom: none;
     }
 
     #header.on {
@@ -376,6 +374,73 @@ body {
     gap: 6px;
 }
 
+@media (max-width:768px) {
+
+    .main_visual {
+        position: relative;
+        margin-top: 80px;
+        /* 헤더 높이만큼 아래로 */
+    }
+
+
+    .main_visual .main_visual_slide .itm {
+        position: relative;
+        height: calc(100vh - 80px);
+        overflow: hidden;
+    }
+
+    .main_visual .main_visual_slide .itm .bg {
+        position: absolute;
+        inset: 0 0 0 0;
+    }
+
+
+    .main_visual .main_visual_slide .itm .slg strong {
+        color: #333;
+
+    }
+
+    .main_visual .main_visual_slide .itm .slg p {
+        color: #333;
+
+    }
+
+    .main_visual .main_visual_slide .itm01 .bg {
+        background: url(../images/main_visual02.jpg) no-repeat;
+    }
+
+    .main_visual .main_visual_slide .itm02 .bg {
+        background: url(../images/main_visual01.jpg) no-repeat;
+    }
+
+    .main_visual .slg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        max-width: 144rem;
+        width: 100%;
+
+        text-align: left;
+    }
+
+
+    .main_visual .scroll {
+        position: absolute;
+        left: 50%;
+        bottom: 6rem;
+
+        z-index: 2;
+
+        transform: translate(-50%, 0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+    }
+}
+
 .main_lnk {}
 
 .main_lnk .inner {
@@ -430,12 +495,14 @@ body {
         align-items: flex-end;
         position: relative;
         gap: 3rem;
+        margin: 8rem auto;
 
         /* r */
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
         height: auto;
         gap: 3rem 0;
+        margin: 4rem auto;
 
     }
 
@@ -531,6 +598,40 @@ body {
     text-align: center;
 }
 
+@media (max-width: 768px) {
+
+
+
+    .main_product .inner {
+        /* r */
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+
+    .main_product .inner strong {
+        display: block;
+        white-space: nowrap;
+        line-height: 1.2;
+
+        /* r */
+        font-size: 2.5vw;
+        white-space: normal;
+        line-height: 1.3;
+    }
+
+    .main_product .inner p {
+        display: block;
+        white-space: nowrap;
+        margin-top: 8px;
+        font-size: 1.4rem;
+        line-height: 1.6;
+
+        /* r */
+        font-size: 2vw;
+        white-space: normal;
+        line-height: 1.2;
+    }
+}
+
 .main_review {}
 
 
@@ -572,6 +673,17 @@ body {
     width: 100%;
     margin: 0 auto;
     text-align: center;
+}
+
+
+@media (max-width: 768px) {
+
+
+
+    .main_review .inner {
+        /* r */
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
 }
 
 
