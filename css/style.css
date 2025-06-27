@@ -332,6 +332,15 @@ body {
     inset: 0 0 0 0;
 }
 
+
+.main_visual .main_visual_slide .itm .slg strong {
+    color: #333;
+}
+
+.main_visual .main_visual_slide .itm .slg p {
+    color: #333;
+}
+
 .main_visual .main_visual_slide .itm01 .bg {
     background: url(../images/main_visual02.jpg) no-repeat;
 }
@@ -350,6 +359,65 @@ body {
     width: 100%;
 
     text-align: left;
+}
+
+
+.main_visual .scroll {
+    position: absolute;
+    left: 50%;
+    bottom: 6rem;
+
+    z-index: 2;
+
+    transform: translate(-50%, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.main_lnk {}
+
+.main_lnk .inner {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    gap: 3rem;
+}
+
+.main_lnk .inner .itm {
+    display: flex;
+    margin: 8rem 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+    flex: 1;
+}
+
+.main_lnk .inner .itm i {
+    height: 14rem;
+    width: 14rem;
+    background: var(--backgroud-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.main_lnk .inner .itm i img {
+    width: 100px;
+    height: 100px;
+
+    object-fit: cover;
+}
+
+.main_lnk .inner .itm strong {
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .main_product {

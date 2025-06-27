@@ -23,15 +23,9 @@ $(function () {
     const main_visual_slide = new Swiper('.main_visual_slide', {
         loop: true,
         parallax: true,
-        speed: 1000,
+        speed: 1500,
+        // autoplay: {
+        //     delay: 3000,
+        // }
     });
-
-    $('.main_visual .prev').on('click', function () {
-        main_visual_slide.slidePrev();
-    });
-    $('.main_visual .next').on('click', function () {
-        main_visual_slide.slideNext();
-    });
-    /*swipe Swiper Core/API methods&properties swiper.slideprev,next 에서 참고하면된다.*/
-})
-
+});
