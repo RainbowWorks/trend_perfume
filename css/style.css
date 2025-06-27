@@ -48,7 +48,12 @@ body {
     display: flex;
 }
 
-#header h1 a img {}
+#header h1 a img {
+    height: 6.4rem;
+
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
 
 #header .gnb {}
 
@@ -173,6 +178,8 @@ body {
 
     #header h1 a img {
         height: 6.4rem;
+        vertical-align: middle;
+        margin: 0 1.6rem;
     }
 
     #header .gnb {
@@ -298,7 +305,7 @@ body {
         display: block;
         position: fixed;
         top: 2.4rem;
-        right: 16px;
+        right: 1.6rem;
         z-index: 999;
 
         background: #fff;
@@ -624,5 +631,5 @@ body {
 
 
 * {
-    outline: 1px solid tomato--;
+    outline: 1px solid tomato;
 }
